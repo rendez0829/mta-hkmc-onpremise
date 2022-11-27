@@ -1,0 +1,8 @@
+<mvc:View 
+    controllerName="com.hkmc.trial.ztmp001.controller.App" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:ui="sap.ui.table" 
+    displayBlock="true" 
+    xmlns="sap.m" >
+    <App id="app"/>
+</mvc:View>

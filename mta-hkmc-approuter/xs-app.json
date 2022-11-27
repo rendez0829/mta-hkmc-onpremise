@@ -1,0 +1,18 @@
+{
+  "welcomeFile": "comhkmctrialztmp001/index.html",
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "source": "^/onpremise/(.*)$",
+      "target": "$1",
+      "destination": "onpremise",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/onpremise/(.*)$",
+      "target": "$1",
+      "destination": "onpremise",
+      "csrfProtection": false
+    }
+  ]
+}

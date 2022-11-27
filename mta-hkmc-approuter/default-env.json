@@ -1,0 +1,12 @@
+{
+    "destinations": [
+        {
+            "url": "https://sandbox.api.sap.com",
+            "name": "sfsf_sandbox"
+        },
+        {
+            "url": "http://sems.istn.co.kr:8010/",
+            "name": "onpremise"
+        }
+    ]
+}

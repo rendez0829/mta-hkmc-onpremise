@@ -1,0 +1,98 @@
+<mvc:View 
+    controllerName="com.hkmc.trial.ztmp001.controller.Main" 
+    xmlns:mvc="sap.ui.core.mvc" 
+    xmlns:ui="sap.ui.table" 
+    displayBlock="true" 
+    xmlns="sap.m" >
+    <Page title="employee">
+        <content>
+            <ui:Table 
+                id="id-tableTxwa" 
+                visibleRowCount="10" 
+                rows="{
+                    path: 'PerEmergencyContacts>/',
+                    sorter: [],
+                    templateShareable : false
+                }" selectionMode="MultiToggle" ariaLabelledBy="title">
+                <ui:extension>
+                    <OverflowToolbar>
+                        <Text text="Employee"/>
+                    </OverflowToolbar>
+                </ui:extension>
+                <ui:columns>
+                    <ui:Column hAlign="Center" autoResizable="true">
+                        <Label text="personIdExternal" />
+                        <ui:template>
+                            <Text text="{PerEmergencyContacts>personIdExternal}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column hAlign="Center" autoResizable="true">
+                        <Label text="name" />
+                        <ui:template>
+                            <Text text="{PerEmergencyContacts>name}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column hAlign="Center" autoResizable="true">
+                        <Label text="phone" />
+                        <ui:template>
+                            <Text text="{PerEmergencyContacts>phone}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column hAlign="Center" autoResizable="true">
+                        <Label text="email" />
+                        <ui:template>
+                            <Text text="{PerEmergencyContacts>email}"/>
+                        </ui:template>
+                    </ui:Column>
+                </ui:columns>
+            </ui:Table>
+
+            <ui:Table 
+                id="id-tableUsers" 
+                visibleRowCount="10" 
+                rows="{
+                    path: 'Users>/',
+                    sorter: [],
+                    templateShareable : false
+                }" selectionMode="MultiToggle" ariaLabelledBy="title">
+                <ui:extension>
+                    <OverflowToolbar>
+                        <Text text="User"/>
+                    </OverflowToolbar>
+                </ui:extension>
+                <ui:columns>
+                    <ui:Column hAlign="Center" autoResizable="true">
+                        <Label text="PERNR" />
+                        <ui:template>
+                            <Text text="{Users>PERNR}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column hAlign="Center" autoResizable="true">
+                        <Label text="SUBTY" />
+                        <ui:template>
+                            <Text text="{Users>SUBTY}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column hAlign="Center" autoResizable="true">
+                        <Label text="OBJPS" />
+                        <ui:template>
+                            <Text text="{Users>OBJPS}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column hAlign="Center" autoResizable="true">
+                        <Label text="SPRPS" />
+                        <ui:template>
+                            <Text text="{Users>SPRPS}"/>
+                        </ui:template>
+                    </ui:Column>
+                    <ui:Column hAlign="Center" autoResizable="true">
+                        <Label text="SEQNR" />
+                        <ui:template>
+                            <Text text="{Users>SEQNR}"/>
+                        </ui:template>
+                    </ui:Column>
+                </ui:columns>
+            </ui:Table>
+        </content>
+    </Page>
+</mvc:View>

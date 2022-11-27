@@ -1,0 +1,49 @@
+_schema-version: "3.2"
+ID: mta-hkmc
+version: 0.0.1
+modules:
+- name: mta-hkmc-app-content
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: mta-hkmc-repo-host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - comhkmctrialztmp001.zip
+      name: comhkmctrialztmp001
+      target-path: resources/
+- name: comhkmctrialztmp001
+  type: html5
+  path: ztmp_001
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+- name: mta-hkmc-approuter
+  type: approuter.nodejs
+  path: mta-hkmc-approuter
+  requires:
+  - name: mta-hkmc_html_repo_runtime
+  parameters:
+    disk-quota: 256M
+    memory: 256M
+resources:
+- name: mta-hkmc-repo-host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-host
+- name: mta-hkmc_html_repo_runtime
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-plan: app-runtime
+parameters:
+  deploy_mode: html5-repo
